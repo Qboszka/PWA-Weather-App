@@ -3,6 +3,8 @@ import fetchWeather  from './api/fetchWeather';
 import './App.css';
 import Footer from './footer';
 
+
+
 const App = () => {
     const [query, setQuery] = useState('');
     const [weather, setWeather] = useState('')
@@ -15,10 +17,7 @@ const App = () => {
         }
     }
 
-    
     return(
-        
-        
         <div className="main-container">
             <input type="text" className="search" placeholder="search..." value={query} onChange={(e) => setQuery(e.target.value)} onKeyPress={search}/>
             {weather && (
@@ -85,10 +84,7 @@ const App = () => {
             )}
             <Footer/>
         </div>
-        
-        
     );
-    
 }
     
 export default App

@@ -98,6 +98,25 @@ p {
   position: fixed;
   bottom: 0;
   right: 0;
-  width: 20%;
+  
+  box-sizing: content-box;
   text-align: right;
   color: #ff8c00;}
+
+  @media only screen and (max-width: 600px) {
+    .search {
+        padding: 20px 15%;
+    }
+
+    .city {
+        padding: 40px 20%;
+    }
+
+    .main-container {
+      padding: 20px 15%;
+      scale: 5%;
+    }
+    .footer{
+      padding: 20px 15%;
+    }
+}

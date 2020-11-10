@@ -9,7 +9,7 @@ const App = () => {
 
     const search = async (e) => {
         if(e.key === 'Enter'){
-            const data = await fetchWeather(query).catch(console.log("Something went wrong :("))
+            const data = await fetchWeather(query).catch(err => console.log("Something went wrong :("))
             setWeather(data);
             setQuery('');    
         }

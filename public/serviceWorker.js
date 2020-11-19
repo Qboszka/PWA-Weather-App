@@ -11,7 +11,6 @@ self.addEventListener('install', (e) => {
                 return cache.addAll(urlsToCache);
             })
     )
-
 }); 
 
 self.addEventListener('fetch', (e) => {
@@ -22,12 +21,11 @@ self.addEventListener('fetch', (e) => {
                     .catch(() => caches.match('offline.html'))
             })
     )
-    
 });
 
 self.addEventListener('activate', (e) => {
     const cacheWhitelist = [];
-    chaceWhitelist.push(CACHE_NAME)
+    cacheWhitelist.push(CACHE_NAME)
     
     e.waitUntil(
         caches.keys().then((cacheNames) => Promise.all(
@@ -39,5 +37,4 @@ self.addEventListener('activate', (e) => {
 
         ))
     )
-    
 });
